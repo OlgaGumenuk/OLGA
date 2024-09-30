@@ -3,7 +3,8 @@
 }
 
 .btn--sub {
-  background-color: var(--color-sub-light);
+  background-color: #281c93;
+  font-size: 18px;
 }
 
 .card {
@@ -31,7 +32,7 @@ img {
 .header {
   position: sticky;
   z-index: 111;
-  background-color: var(--color-sub);
+  background-color: #336666;
   padding: 1.5rem 0;
 }
 
@@ -50,10 +51,13 @@ img {
   align-items: center;
   list-style: none;
   gap: 6.5rem;
+  text-align: center;
+  font-size: 18px;
+  color: gainsboro;
 }
 
 .header__menuItem > a {
-  color: var(--color-light);
+  color: #f5f4bb;
   font-weight: 300;
 }
 
@@ -170,10 +174,10 @@ img {
 ========================*/
 
 .hero-section {
-  height: 40vh;
+  height: 30vh;
   display: flex;
   align-items: center;
-  background-color: var(--color-sub);
+  background-color: #27836e;
 }
 
 .hero-section__box {
@@ -323,6 +327,38 @@ img {
   Profile
 ========================*/
 
+.website{
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 7px 7px 5px 7px;
+  background: url(../repairs/web_icon.png) no-repeat center top / cover;
+  transition: 0.5s ease-in-out;
+}
+.vkontakte{
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 7px 7px 5px 7px;
+  background: url(../repairs/VK.png) no-repeat center top / cover;
+  transition: 0.5s ease-in-out;
+}
+.whatsapp{
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 7px 7px 5px 7px;
+  background: url(../repairs/wha_icon.png) no-repeat center top / cover;
+  transition: 0.5s ease-in-out;
+}
+.telegram{
+  width: 35px;
+  height: 35px;
+  float: right;
+  margin: 7px 7px 5px 7px;
+  background: url(../repairs/t-icon.png) no-repeat center top / cover;
+  transition: 0.5s ease-in-out;
+}
 .profile .card > .dev {
   padding: 4rem;
 }

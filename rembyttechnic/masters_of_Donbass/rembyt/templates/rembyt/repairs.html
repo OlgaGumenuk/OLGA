@@ -33,7 +33,7 @@
                 <img class="project__thumbnail" src="{{ repair.my_image.url }}" alt="project thumbnail" />
                 <div class="card__body">
                   <h3 class="project__title">{{ repair.type_of_repair }}</h3>
-                  <p><a class="project__author" href="profile.html">By Dennis Ivanov</a></p>
+                  <p><a class="project__author" href="profile.html">От {{ repair.owner.name }}</a></p>
                   <p class="project--rating">
                     <span style="font-weight: bold;">{{ repair.vote_ratio }}%</span> Positive
                     Feedback ({{ repair.vote_total }} Votes)
