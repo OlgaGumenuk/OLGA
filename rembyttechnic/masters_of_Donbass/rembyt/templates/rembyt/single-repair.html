@@ -14,9 +14,11 @@
             </div>
             <div class="column column--2of3">
                 <img class="singleProject__preview" src="{{ repair.my_image.url }}" alt="portfolio thumbnail"/>
-                <a href="profile.html" class="singleProject__developer">От {{ repair.owner.name }}</a>
+<!--                {% if repair.owner.name %} -->
+                <a href="{% url 'file_engineer' repair.owner.id %}" class="singleProject__developer">{{repair.owner.name}}</a>
+<!--                {% endif %}-->
                 <h2 class="singleProject__title">{{ repair.type_of_repair }}</h2>
-                <h3 class="singleProject__subtitle">About the Project</h3>
+                <h3 class="singleProject__subtitle">О ремонте и услуге</h3>
                 <div class="singleProject__info">
                     {{ repair.description }}
                 </div>
@@ -30,7 +32,7 @@
                     <form class="form" action="#" method="POST">
                         <!-- Textarea -->
                         <div class="form__field">
-                            <label for="formInput#textarea">Comments: </label>
+                            <label for="formInput#textarea">Комментарии: </label>
                             <textarea class="input input--textarea" name="message" id="formInput#textarea"
                                       placeholder="Write your comments here..."></textarea>
                         </div>

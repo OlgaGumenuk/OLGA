@@ -10,14 +10,14 @@
         </div>
 
         <div class="hero-section__search">
-          <form class="form" action="#" method="get">
+          <form id="search" class="form" action="{% url 'repairs' %}" method="get">
             <div class="form__field">
-              <label for="formInput#search">Ищу ремонт </label>
-              <input class="input input--text" id="formInput#search" type="text" name="text"
-                placeholder="Search by Project Title" />
+              <label for="formInput#search">Поиск услуг и ремонта </label>
+              <input class="input input--text" id="formInput#search" type="text" name="search_query2"
+                               placeholder="Поиск услуг и ремонта" value="{{search_query2}}" />
             </div>
 
-            <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+            <input class="btn btn--sub btn--lg" type="submit" value="Поиск" />
           </form>
         </div>
       </div>
@@ -33,7 +33,7 @@
                 <img class="project__thumbnail" src="{{ repair.my_image.url }}" alt="project thumbnail" />
                 <div class="card__body">
                   <h3 class="project__title">{{ repair.type_of_repair }}</h3>
-                  <p><a class="project__author" href="profile.html">От {{ repair.owner.name }}</a></p>
+                  <p><a class="project__author" href="{% url 'file_engineer' repair.owner.id %}">{{repair.owner.name}}</a></p>
                   <p class="project--rating">
                     <span style="font-weight: bold;">{{ repair.vote_ratio }}%</span> Positive
                     Feedback ({{ repair.vote_total }} Votes)
@@ -50,22 +50,7 @@
       </div>
     </section>
 
-    <div class="pagination">
-      <ul class="container">
-        <li><a href="#" class="btn btn--disabled">&#10094; Prev</a></li>
-        <li><a href="#" class="btn btn--sub">01</a></li>
-        <li><a href="#" class="btn">02</a></li>
-        <li><a href="#" class="btn">03</a></li>
-        <li><a href="#" class="btn">04</a></li>
-        <li><a href="#" class="btn">05</a></li>
-        <li><a href="#" class="btn">06</a></li>
-        <li><a href="#" class="btn">07</a></li>
-        <li><a href="#" class="btn">08</a></li>
-        <li><a href="#" class="btn">09</a></li>
-        <li><a href="#" class="btn">10</a></li>
-        <li><a href="#" class="btn">Next &#10095;</a></li>
-      </ul>
-    </div>
+{% include 'rembyt/pagination.html' with queryset=repairs %}
   </main>
 
 {% endblock %}

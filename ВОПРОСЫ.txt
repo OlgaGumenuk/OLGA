@@ -1,6 +1,34 @@
-1. Папка(из шаблона) documentation рядом с папкои проэкта.
-Стили CSS+фаилы HTML есть и там и там. Добавлять ли ее?
+"pip" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
 
-2.(из шаблона) тэг Header и тэг Topbar внутри div class="boxed_wrapper"
-(как бы внутри main) то есть в основном теле кода.
-Выносить если только Header в navbar.html? Если так сделать стили не сработают, что делать?
+C:\Users\Gleb>py -m pip install Django==5.1.3
+Collecting Django==5.1.3
+  Downloading Django-5.1.3-py3-none-any.whl.metadata (4.2 kB)
+Collecting asgiref<4,>=3.8.1 (from Django==5.1.3)
+  Downloading asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from Django==5.1.3)
+  Downloading sqlparse-0.5.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from Django==5.1.3)
+  Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Downloading Django-5.1.3-py3-none-any.whl (8.3 MB)
+   ---------------------------------------- 8.3/8.3 MB 1.5 MB/s eta 0:00:00
+Downloading asgiref-3.8.1-py3-none-any.whl (23 kB)
+Downloading sqlparse-0.5.1-py3-none-any.whl (44 kB)
+Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, Django
+  WARNING: The script sqlformat.exe is installed in 'C:\Users\Gleb\AppData\Local\Programs\Python\Python313\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script django-admin.exe is installed in 'C:\Users\Gleb\AppData\Local\Programs\Python\Python313\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed Django-5.1.3 asgiref-3.8.1 sqlparse-0.5.1 tzdata-2024.2
+
+[notice] A new release of pip is available: 24.2 -> 24.3.1
+[notice] To update, run: C:\Users\Gleb\AppData\Local\Programs\Python\Python313\python.exe -m pip install --upgrade pip
+
+C:\Users\Gleb>pip install Pillow
+"pip" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+
+C:\Users\Gleb>python -m pip install --upgrade pip
+Python
+C:\Users\Gleb>

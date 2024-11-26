@@ -1,5 +1,8 @@
 from django.contrib import admin
 from .models import Engineer
 
-# Register your models here.
-admin.site.register(Engineer)
+class EngineerAdmin(admin.ModelAdmin):
+    list_display = ('name', 'i_info', 'username', 'email', 'created')
+
+
+admin.site.register(Engineer, EngineerAdmin)

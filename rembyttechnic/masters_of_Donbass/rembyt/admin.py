@@ -4,3 +4,4 @@ from .models import Repair
 
 admin.site.register(Repair)
 
+

@@ -31,6 +31,7 @@ img {
 ========================*/
 .header {
   position: sticky;
+  top: 0;
   z-index: 111;
   background-color: #336666;
   padding: 1.5rem 0;
@@ -90,8 +91,8 @@ img {
 
   .toggle-menu > span {
     display: block;
-    position: fixed;
-    top: 1.5rem;
+    position: sticky;
+    top: 0rem;
     right: 2.75rem;
     cursor: pointer;
     padding: 1rem;
@@ -695,7 +696,7 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(../images/pattern.jpg);
+  
 }
 
 .auth > .card {

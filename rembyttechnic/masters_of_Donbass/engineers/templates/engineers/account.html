@@ -1,0 +1,87 @@
+{% extends 'rembyt/base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- Main Section -->
+  <main class="settingsPage profile my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <div class="card text-center">
+            <div class="card__body dev">
+              <a class="tag tag--pill tag--main settings__btn" href="{% url 'edit-account' %}"><i class="im im-edit">Редактирование</i></a>
+              <img class="avatar avatar--xl dev__avatar" src="{{profile.engineer_image.url}}" />
+              <h2 class="dev__name">{{ profile.name }}</h2>
+              <p class="dev__title">{{ profile.i_info }}</p>
+              <p class="dev__location">{{ profile.education }}</p>
+              <ul class="dev__social">
+                            {% if profile.social_website %}
+                            <li>
+                                <a title="Website" href="{{ engineer.social_website }}" target="_blank"><i
+                                        class="website"></i>
+                                </a>
+
+                            </li>
+                            {% endif %}
+                            {% if profile.social_vkontakte %}
+                            <li>
+                                <a title="Vkontakte" href="{{ engineer.social_vkontakte }}" target="_blank"><i
+                                        class="vkontakte"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_whatsapp %}
+                            <li>
+                                <a title="Whatsapp" href="{{ engineer.social_whatsapp }}" target="_blank"><i
+                                        class="whatsapp"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if profile.social_telegram %}
+                            <li>
+                                <a title="Telegram" href="{{ engineer.social_telegram }}" target="_blank"><i
+                                        class="telegram"></i></a>
+                            </li>
+                            {% endif %}
+                        </ul>
+
+            </div>
+          </div>
+        </div>
+        <div class="column column--2of3">
+          <div class="devInfo">
+            <h3 class="devInfo__title">О себе</h3>
+            <p class="devInfo__about">
+              {{ profile.all_info}}
+            </p>
+          </div>
+
+          <div class="settings">
+            <h3 class="settings__title">Ремонты и услуги</h3>
+            <a class="tag tag--pill tag--sub settings__btn tag--lg" href="{% url 'create-repair' %}"><i class="im im-plus"></i> Добавить вид работы</a>
+          </div>
+
+          <table class="settings__table">
+              {% for repair in repairs %}
+            <tr>
+              <td class="settings__thumbnail">
+                <a href="{% url 'repair' repair.id %}"><img src="{{ repair.my_image.url }}" alt="Project Thumbnail" /></a>
+              </td>
+              <td class="settings__tableInfo">
+                <a href="{% url 'repair' repair.id %}">{{ repair.type_of_repair }}</a>
+                <p>
+                    {{ repair.description|slice:"150" }}
+                </p>
+              </td>
+              <td class="settings__tableActions">
+                <a class="tag tag--pill tag--main settings__btn" href="{% url 'update-repair' repair.id %}"><i class="im im-edit"></i>Редактировать</a>
+                <a class="tag tag--pill tag--main settings__btn" href="{% url 'delete-repair' repair.id %}"><i class="im im-x-mark-circle-o"></i>
+                  Удалить</a>
+              </td>
+            </tr>
+              {% endfor %}
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
